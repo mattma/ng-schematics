@@ -1,0 +1,82 @@
+{
+  // This is just to indicate to your IDE that there is a schema for collection.json.
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+
+  "schematics": {
+    "application": {
+      "description": "Create an Angular application.",
+      "extends": "@schematics/angular:application"
+      // "schema": "./application/schema.json",
+    },
+    "class": {
+      "aliases": [ "cl" ],
+      "description": "Create a class.",
+      "extends": "@schematics/angular:class"
+      // "schema": "./class/schema.json"
+    },
+    "component": {
+      "aliases": [ "c" ],
+      "description": "Create an Angular component.",
+      "extends": "@schematics/angular:component"
+      // "factory": "./component",
+      // "schema": "./component/schema.json"
+    },
+    "directive": {
+      "aliases": [ "d" ],
+      "description": "Create an Angular directive.",
+      "extends": "@schematics/angular:directive"
+      // "factory": "./directive",
+      // "schema": "./directive/schema.json"
+    },
+    "enum": {
+      "aliases": [ "e" ],
+      "description": "Create an enumeration.",
+      "extends": "@schematics/angular:enum"
+      // "schema": "./enum/schema.json"
+    },
+    "guard": {
+      "aliases": [ "g" ],
+      "description": "Create a guard.",
+      "extends": "@schematics/angular:guard"
+      // "schema": "./guard/schema.json"
+    },
+    "interface": {
+      "aliases": [ "i" ],
+      "description": "Create an interface.",
+      "extends": "@schematics/angular:interface"
+      // "schema": "./interface/schema.json"
+    },
+    "module": {
+      "aliases": [ "m" ],
+      "description": "Create an Angular module.",
+      "extends": "@schematics/angular:module"
+      // "factory": "./module",
+      // "schema": "./module/schema.json"
+    },
+    "pipe": {
+      "aliases": [ "p" ],
+      "description": "Create an Angular pipe.",
+      "extends": "@schematics/angular:pipe"
+      // "factory": "./pipe",
+      // "schema": "./pipe/schema.json"
+    },
+    "service": {
+      "aliases": [ "s" ],
+      "description": "Create an Angular service.",
+      "extends": "@schematics/angular:service"
+      // "factory": "./service",
+      // "schema": "./service/schema.json"
+    },
+    "universal": {
+      "description": "Create an Angular universal app.",
+      "extends": "@schematics/angular:universal"
+      // "schema": "./universal/schema.json"
+    },
+    "appShell": {
+      "aliases": [ "app-shell" ],
+      "description": "Create an app shell.",
+      "extends": "@schematics/angular:appShell"
+      // "schema": "./app-shell/schema.json"
+    }
+  }
+}

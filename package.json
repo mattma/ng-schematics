@@ -1,0 +1,31 @@
+{
+  "name": "ng-schematics",
+  "version": "0.1.0",
+  "description": "A schematics with angular and ngrx",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine **/*_spec.js"
+  },
+  "keywords": [
+    "schematics",
+    "angular",
+    "ngrx",
+    "redux"
+  ],
+  "author": {
+    "name": "Matt Ma",
+    "email": "matt@mattmadesign.com",
+    "url": "http://mattma.io"
+  },
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^0.0.21",
+    "@angular-devkit/schematics": "^0.0.37",
+    "@schematics/schematics": "^0.0.7",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^2.8.0",
+    "typescript": "^2.5.2"
+  }
+}
