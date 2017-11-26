@@ -21,6 +21,12 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"
 
+"@schematics/angular@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.1.7.tgz#2306aeec118ca185e180882eff54f5116de4ef05"
+  dependencies:
+    "@angular-devkit/core" "0.0.21"
+
 "@schematics/schematics@^0.0.7":
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/@schematics/schematics/-/schematics-0.0.7.tgz#a8bb3886aa875a02cef815362743064fd868495f"
