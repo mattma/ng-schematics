@@ -24,9 +24,9 @@
     "component": {
       "aliases": [ "c" ],
       "description": "Create an Angular component.",
-      "extends": "@schematics/angular:component"
-      // "factory": "./component",
-      // "schema": "./component/schema.json"
+      // "extends": "@schematics/angular:component"
+      "factory": "./component",
+      "schema": "./component/schema.json"
     },
     "directive": {
       "aliases": [ "d" ],
