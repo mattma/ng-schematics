@@ -14,6 +14,13 @@
       "extends": "@schematics/angular:class"
       // "schema": "./class/schema.json"
     },
+    "route": {
+      "aliases": [ "r" ],
+      "description": "Create an Angular router.",
+      "extends": "@schematics/angular:component"
+      // "factory": "./component",
+      // "schema": "./component/schema.json"
+    },
     "component": {
       "aliases": [ "c" ],
       "description": "Create an Angular component.",
