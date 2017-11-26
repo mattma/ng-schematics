@@ -41,7 +41,7 @@
       "description": "Specifies the change detection strategy.",
       "enum": ["Default", "OnPush"],
       "type": "string",
-      "default": "Default",
+      "default": "OnPush",
       "alias": "cd"
     },
     "routing": {
