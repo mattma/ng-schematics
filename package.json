@@ -1,10 +1,17 @@
 {
   "name": "ng-schematics",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A schematics with angular and ngrx",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine **/*_spec.js"
+    "clean": "rimraf node_modules dist npm-debug.log yarn-error.log && npm cache verify && yarn cache clean",
+    "clean:dist": "rimraf dist",
+    "copy:src": "npm run copy:packagejson && npm run copy:collectionjson",
+    "copy:packagejson": "cp package.json dist/",
+    "copy:collectionjson": "cp src/collection.json dist/src/collection.json",
+    "prebuild": "npm run clean:dist",
+    "build": "tsc -p tsconfig.json --outDir dist/src",
+    "test": "npm run build && jasmine **/*_spec.js",
+    "release": "npm run build && npm run copy:src"
   },
   "keywords": [
     "schematics",
@@ -22,10 +29,13 @@
   "dependencies": {
     "@angular-devkit/core": "^0.0.22",
     "@angular-devkit/schematics": "^0.0.41",
-    "@schematics/angular": "^0.1.10",
+    "@schematics/angular": "^0.1.10"
+  },
+  "devDependencies": {
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.31",
     "jasmine": "^2.8.0",
+    "rimraf": "^2.6.2",
     "typescript": "^2.5.2"
   }
 }

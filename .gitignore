@@ -17,4 +17,5 @@ yarn-error.log*
 **/.DS_Store
 .DS_Store
 
+dist
 package-lock.json
