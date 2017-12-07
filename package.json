@@ -5,11 +5,10 @@
   "scripts": {
     "clean": "rimraf node_modules dist npm-debug.log yarn-error.log && npm cache verify && yarn cache clean",
     "clean:dist": "rimraf dist",
-    "copy": "npm run mkdir:dist && npm run copy:src && npm run copy:packagejson && npm run copy:tsconfigjson",
+    "copy": "npm run mkdir:dist && npm run copy:src && npm run copy:packagejson",
     "mkdir:dist": "mkdir -p dist/src",
     "copy:src": "cp -R src dist",
     "copy:packagejson": "cp package.json dist/",
-    "copy:tsconfigjson": "cp tsconfig.json dist/",
     "build": "tsc -p tsconfig.json --outDir dist/src",
     "test": "npm run build && jasmine **/*_spec.js",
     "prerelease": "npm run clean:dist",
