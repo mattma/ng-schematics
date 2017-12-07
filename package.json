@@ -1,17 +1,20 @@
 {
   "name": "ng-schematics",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A schematics with angular and ngrx",
   "scripts": {
     "clean": "rimraf node_modules dist npm-debug.log yarn-error.log && npm cache verify && yarn cache clean",
     "clean:dist": "rimraf dist",
-    "copy:src": "npm run copy:packagejson && npm run copy:collectionjson",
+    "copy": "npm run mkdir:dist && npm run copy:src && npm run copy:packagejson && npm run copy:tsconfigjson",
+    "mkdir:dist": "mkdir -p dist/src",
+    "copy:src": "cp -R src dist",
     "copy:packagejson": "cp package.json dist/",
-    "copy:collectionjson": "cp src/collection.json dist/src/collection.json",
-    "prebuild": "npm run clean:dist",
+    "copy:tsconfigjson": "cp tsconfig.json dist/",
     "build": "tsc -p tsconfig.json --outDir dist/src",
     "test": "npm run build && jasmine **/*_spec.js",
-    "release": "npm run build && npm run copy:src"
+    "prerelease": "npm run clean:dist",
+    "release": "npm run copy && npm run build",
+    "publish": "npm publish dist"
   },
   "keywords": [
     "schematics",
